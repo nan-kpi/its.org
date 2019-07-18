@@ -1,7 +1,9 @@
 
-var NewChartView = AbstractPrimaryView.extend({
+/*var NewChartView = Backbone.View.extend({
 id: 'newchart',
-render: function Diagram () {
+render: */
+
+function Diagram () {
   var ctx = document.getElementById("myChart");
   var myChart = new Chart (ctx, {
    type: 'line',
@@ -47,7 +49,6 @@ render: function Diagram () {
    return Math.pow(x,2);
   }
  }
-
- window.addEventListener("load", Diagram); 
-
- }); 
+ window.addEventListener("load", Diagram);
+ /*
+ }); */
