@@ -42,8 +42,8 @@ var NewChartView = AbstractPrimaryView.extend({
                     fullWidth: false,
                     fontColor:"blue", 
                 labels: {
-                fontSize:3,
-                boxWidth:5
+                fontSize:4,
+                boxWidth:8
                 },
                 },
             
