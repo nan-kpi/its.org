@@ -41,11 +41,12 @@ var NewChartView = AbstractPrimaryView.extend({
                     position: 'right',
                     fullWidth: false,
                     fontColor:"blue", 
-                    labels{
-                fontSize: 3,
+                labels: {
+                fontSize:3,
                 boxWidth:5
                 },
                 },
+            
                 layout: {
                     margin: {
                     right:50
