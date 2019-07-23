@@ -29,7 +29,7 @@ var NewChartView = AbstractPrimaryView.extend({
 
 
         var myChart = new Chart(this.el, {
-            type: 'bar',
+            type: 'polarArea',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
                 datasets: _.toArray(datasets)
@@ -50,7 +50,7 @@ var NewChartView = AbstractPrimaryView.extend({
                 title:{
                     display: true,
                     text: 'Водосховища-test',
-                    fontsize: 42
+                    fontSize: 42
                 },
                 layout: {
                     margin: {
