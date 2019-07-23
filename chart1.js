@@ -13,8 +13,8 @@ var NewChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'green', //random
-                        borderWidth: 7,
+                        borderColor: 'yellow', //random
+                        borderWidth: 6,
                         fill: false
                     };
                 }
