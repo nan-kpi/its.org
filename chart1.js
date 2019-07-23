@@ -13,7 +13,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'blue', //random
+                        borderColor: '#000', //random
                         borderWidth: 3,
                         fill: false
                     };
@@ -47,7 +47,7 @@ var NewChartView = AbstractPrimaryView.extend({
             padding: {
                 left: 0,
                 right: 10,
-                top: 50,
+                top: 10,
                 bottom: 60
                 }
                 },
