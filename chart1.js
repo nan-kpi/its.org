@@ -46,7 +46,7 @@ var NewChartView = AbstractPrimaryView.extend({
                 left: 35,
                 right: 100,
                 top: 50,
-                bottom: 75
+                bottom: 130
                 }
                 },
                 scales: {
