@@ -13,7 +13,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'blue', //random
+                        borderColor: 'yellow', //random
                         borderWidth: 3,
                         fill: false
                     };
@@ -29,7 +29,7 @@ var NewChartView = AbstractPrimaryView.extend({
 
 
         var myChart = new Chart(this.el, {
-            type: 'polarArea',
+            type: 'doughnut',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
                 datasets: _.toArray(datasets)
@@ -43,7 +43,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     fullWidth: false,
                     fontColor:"blue", 
                     labels: {
-                        fontSize:4,
+                        fontSize:5,
                         boxWidth:8 
                     },
                 },
