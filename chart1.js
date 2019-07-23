@@ -50,7 +50,7 @@ var NewChartView = AbstractPrimaryView.extend({
                 title:{
                     display: true,
                     text: 'Водосховища-test',
-                    fontsize: 50
+                    fontsize: 42
                 },
                 layout: {
                     margin: {
