@@ -84,4 +84,4 @@ var NewChartView = AbstractPrimaryView.extend({
     }
 }); 
 
-$(".linechart").css("overflow-x":"scroll");
+$(".linechart").css("overflow-x","scroll");
