@@ -35,7 +35,7 @@ var NewChartView = AbstractPrimaryView.extend({
                 datasets: _.toArray(datasets)
             },
             options: {
-                responsive: false,
+                responsive: true,
                 legend: {
                     display: false,
                     position: 'bottom',
