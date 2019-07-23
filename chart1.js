@@ -38,9 +38,9 @@ var NewChartView = AbstractPrimaryView.extend({
                 maintainAspectRatio: true,
                 responsive: true,
                 legend: {
-                    display: true,
+                    display: ,
                     position: 'right',
-                    boxWidth:40,
+                    boxWidth:5,
                     fullWidth: false
                 },
                 layout: {
