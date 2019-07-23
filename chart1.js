@@ -13,7 +13,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'black', //random
+                        borderColor: 'blue', //random
                         borderWidth: 3,
                         fill: false
                     };
@@ -50,7 +50,8 @@ var NewChartView = AbstractPrimaryView.extend({
                 title:{
                     display: true,
                     text: 'Водосховища-test',
-                    fontsize: 40
+                    fontsize: 40,
+                    padding:{right:50}
                 },
                 layout: {
                     margin: {
