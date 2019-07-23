@@ -43,9 +43,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     boxWidth:5,
                     fullWidth: false,
                     fontColor:"blue", //Работает
-                    fontFamily:"Tahoma",
-                    fontSize: 30,
-                    orient: 'vertical'
+                    fontSize: 3
                 },
                 layout: {
                     margin: {
