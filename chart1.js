@@ -41,12 +41,16 @@ var NewChartView = AbstractPrimaryView.extend({
                     position: 'right',
                     fullWidth: false,
                     fontColor:"blue", 
-                labels: {
-                fontSize:16,
-                boxWidth:20
+                    labels: {
+                        fontSize:16,
+                        boxWidth:20 
+                    },
                 },
+                title:{
+                    display: true,
+                    text: 'Водосховища-test',
+                    fontsize: 24
                 },
-            
                 layout: {
                     margin: {
                     right:50
