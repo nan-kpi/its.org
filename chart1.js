@@ -45,7 +45,7 @@ var NewChartView = AbstractPrimaryView.extend({
                 },
                 layout: {
             padding: {
-                left: 35,
+                left: 0,
                 right: 10,
                 top: 50,
                 bottom: 60
