@@ -13,7 +13,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'blue', //random
+                        borderColor: 'yellow', //random
                         borderWidth: 3,
                         fill: false
                     };
@@ -35,15 +35,17 @@ var NewChartView = AbstractPrimaryView.extend({
                 datasets: _.toArray(datasets)
             },
             options: {
-                maintainAspectRatio: true,
                 responsive: true,
                 legend: {
                     display:true ,
                     position: 'right',
-                    boxWidth:5,
                     fullWidth: false,
-                    fontColor:"blue", //Работает
-                    fontSize: 3
+                    fontColor:"blue", 
+                    
+                    labels{
+                fontSize: 3,
+                boxWidth:5
+                }
                 },
                 layout: {
                     margin: {
