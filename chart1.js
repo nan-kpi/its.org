@@ -54,10 +54,6 @@ var NewChartView = AbstractPrimaryView.extend({
 
         this.resizeContent();
         myChart.update();
-
-        this.hideLoader();
-        function f(x) {
-            return Math.pow(x, 2);
         }
     }
 }); 
