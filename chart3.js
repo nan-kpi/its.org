@@ -13,7 +13,7 @@ var ZChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'red', //random
+                        borderColor: 'orange', //random
                         borderWidth: 6,
                         fill: true
                     };
@@ -29,7 +29,7 @@ var ZChartView = AbstractPrimaryView.extend({
 
 
         var myChart = new Chart(this.el, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
                 datasets: _.toArray(datasets)
