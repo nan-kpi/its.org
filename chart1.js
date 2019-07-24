@@ -13,7 +13,7 @@ var NewChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'pink', //random
+                        borderColor: 'green', //random
                         borderWidth: 5,
                         fill: false
                     };
@@ -83,5 +83,13 @@ var NewChartView = AbstractPrimaryView.extend({
         }
     }
 }); 
+
+events: {
+   'render': 'afterRender'
+}
+
+afterRender: function(e){
+    alert("render complete")
+};
 
 $(".linechart").css("overflow","scroll");
