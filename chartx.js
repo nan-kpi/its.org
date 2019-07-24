@@ -13,7 +13,7 @@ var XChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'black', //random
+                        borderColor: 'red', //random
                         borderWidth: 6,
                         fill: true
                     };
@@ -54,7 +54,7 @@ var XChartView = AbstractPrimaryView.extend({
                 },
                 layout: {
                     margin: {
-                    right:100
+                    right:500
                     },
             padding: {
                 left: 10,
