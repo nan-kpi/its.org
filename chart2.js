@@ -1,7 +1,7 @@
 /* global AbstractPrimaryView, _ */
 
-var ChartView2 = AbstractPrimaryView.extend({
-    id: 'linechart',
+var NewChartView1 = AbstractPrimaryView.extend({
+    id: 'linechart1',
     tagName: 'canvas',
     className: 'viewport linechart',
     render: function () {
