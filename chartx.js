@@ -1,7 +1,7 @@
 /* global AbstractPrimaryView, _ */
 
 var XChartView = AbstractPrimaryView.extend({
-    id: 'linechart',
+    id: 'linechart2',
     tagName: 'canvas',
     className: 'viewport linechart',
     render: function () {
@@ -13,7 +13,7 @@ var XChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'red', //random
+                        borderColor: 'blue', //random
                         borderWidth: 6,
                         fill: true
                     };
@@ -58,9 +58,9 @@ var XChartView = AbstractPrimaryView.extend({
                     },
             padding: {
                 left: 10,
-                right: 1000,
+                right: 200,
                 top: 10,
-                bottom: 1000
+                bottom: 20
                 }
                 },
                 scales: {
