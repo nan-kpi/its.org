@@ -13,9 +13,9 @@ var YChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'blue', //random
-                        borderWidth: 6,
-                        fill: true
+                        borderColor: 'red', //random
+                        borderWidth: 3,
+                        fill: false
                     };
                 }
                 
@@ -38,7 +38,7 @@ var YChartView = AbstractPrimaryView.extend({
                 responsive: true,
                 maintainAspectRatio: false,
                 legend: {
-                    display:false ,
+                    display:true ,
                     position: 'right',
                     fullWidth: false,
                     fontColor:"blue", 
@@ -57,10 +57,10 @@ var YChartView = AbstractPrimaryView.extend({
                     right:10
                     },
             padding: {
-                left: 10,
-                right: 200,
+                left: 0,
+                right: 10,
                 top: 10,
-                bottom: 20
+                bottom: 10
                 }
                 },
                 scales: {
