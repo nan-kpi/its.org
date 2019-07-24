@@ -49,7 +49,7 @@ var XChartView = AbstractPrimaryView.extend({
                 },
                 title:{
                     display: true,
-                    text: 'Водосховища-2',
+                    text: 'Сколець',
                     fontSize: 40
                 },
                 layout: {
