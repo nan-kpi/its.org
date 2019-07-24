@@ -13,7 +13,15 @@ var ZChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: [], //random
+                        borderColor: ['rgba(0, 99, 132, 1)',
+    'rgba(30, 99, 132, 1)',
+    'rgba(60, 99, 132, 1)',
+    'rgba(90, 99, 132, 1)',
+    'rgba(120, 99, 132, 1)',
+    'rgba(150, 99, 132, 1)',
+    'rgba(180, 99, 132, 1)',
+    'rgba(210, 99, 132, 1)',
+    'rgba(240, 99, 132, 1)'], //random
                         borderWidth: 6,
                         fill: true
                     };
