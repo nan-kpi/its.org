@@ -49,7 +49,7 @@ var NewChartView = AbstractPrimaryView.extend({
                 },
                 title:{
                     display: true,
-                    text: 'Водосховища-test',
+                    text: 'Биков',
                     fontSize: 40
                 },
                 layout: {
