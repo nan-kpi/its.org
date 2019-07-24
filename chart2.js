@@ -49,7 +49,7 @@ var NewChartView1 = AbstractPrimaryView.extend({
                 },
                 title:{
                     display: true,
-                    text: 'Водосховища-3',
+                    text: 'Смаглюк',
                     fontSize: 40
                 },
                 layout: {
