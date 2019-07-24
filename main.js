@@ -11,7 +11,7 @@ new PrismView({options: this.options}),
 new MapView ({options: this.options}),
 //Ваше нове представлення
 new NewChartView({options: this.options}),
-new XChartView({options: this.options}),
+new XChartView({options: this.options})
 //new SmahliukChartView({options: this.options})
 ];
 },
