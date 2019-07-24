@@ -1,7 +1,7 @@
 /* global AbstractPrimaryView, _ */
 
-var NewChartView1 = AbstractPrimaryView.extend({
-    id: 'linechart1',
+var XChartView = AbstractPrimaryView.extend({
+    id: 'linechart2',
     tagName: 'canvas',
     className: 'viewport linechart',
     render: function () {
@@ -13,7 +13,7 @@ var NewChartView1 = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: 'yellow', //random
+                        borderColor: 'blue', //random
                         borderWidth: 6,
                         fill: true
                     };
@@ -49,7 +49,7 @@ var NewChartView1 = AbstractPrimaryView.extend({
                 },
                 title:{
                     display: true,
-                    text: 'Водосховище - 3',
+                    text: 'Смаглюк',
                     fontSize: 40
                 },
                 layout: {
@@ -85,4 +85,3 @@ var NewChartView1 = AbstractPrimaryView.extend({
 }); 
 
 $(".linechart").css("overflow","scroll");
-© 2019 GitHub, Inc.
