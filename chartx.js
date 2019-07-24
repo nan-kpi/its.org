@@ -58,9 +58,9 @@ var XChartView = AbstractPrimaryView.extend({
                     },
             padding: {
                 left: 10,
-                right: 500,
+                right: 1000,
                 top: 10,
-                bottom: 50
+                bottom: 1000
                 }
                 },
                 scales: {
