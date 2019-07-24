@@ -29,7 +29,7 @@ var YChartView = AbstractPrimaryView.extend({
 
 
         var myChart = new Chart(this.el, {
-            type: 'bar',
+            type: 'horizontalBar',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
                 datasets: _.toArray(datasets)
