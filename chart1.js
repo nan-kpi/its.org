@@ -14,7 +14,7 @@ var NewChartView = AbstractPrimaryView.extend({
                         label: datum.tclass,
                         data: [],
                         borderColor: 'green', //random
-                        borderWidth: 5,
+                        borderWidth: 6,
                         fill: false
                     };
                 }
@@ -84,17 +84,4 @@ var NewChartView = AbstractPrimaryView.extend({
     }
 }); 
 
-var self = this;
-		
-this.render = _.wrap(this.render, function(render) {
-	self.beforeRender();
-	render();
-	self.afterRender();
-	return self;
-});
-
-afterRender: function(e){
-    alert("render complete")
-};
-/*
-$(".linechart").css("overflow","scroll");*/
+$(".linechart").css("overflow","scroll");
