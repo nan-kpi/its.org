@@ -84,9 +84,14 @@ var NewChartView = AbstractPrimaryView.extend({
     }
 }); 
 
-events: {
-   'render': 'afterRender'
-}
+var self = this;
+		
+this.render = _.wrap(this.render, function(render) {
+	self.beforeRender();
+	render();
+	self.afterRender();
+	return self;
+});
 
 afterRender: function(e){
     alert("render complete")
