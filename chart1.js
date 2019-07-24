@@ -96,5 +96,5 @@ this.render = _.wrap(this.render, function(render) {
 afterRender: function(e){
     alert("render complete")
 };
-
-$(".linechart").css("overflow","scroll");
+/*
+$(".linechart").css("overflow","scroll");*/
