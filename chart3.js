@@ -1,6 +1,6 @@
 /* global AbstractPrimaryView, _ */
 
-var XChartView = AbstractPrimaryView.extend({
+var ZChartView = AbstractPrimaryView.extend({
     id: 'linechart3',
     tagName: 'canvas',
     className: 'viewport linechart',
