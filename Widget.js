@@ -41,5 +41,5 @@ var CustomGraphView = AbstractPrimaryView.extend({
 });
 
 $(window).load(afterRender() {
-("#graph_custom").children("i").attr({'class':'fa fa-file-code-o','aria-hidden':'true'});
+("#graph_custom").children("i").attr({'class':'fa fa-file-code-o','aria-hidden':'true'})
 });
