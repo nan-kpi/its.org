@@ -1,7 +1,7 @@
 /* global AbstractPrimaryView, _, GraphMixin, GraphSelectionMixin */
 
 var CustomGraphView = AbstractPrimaryView.extend({
-    id: 'graph',
+    id: 'graph_custom',
     className: 'viewport cahrt0',
     contentParentSelector: null,
     widgetTemplate: 'GraphViewWidget',
