@@ -2,7 +2,7 @@
 
 var CustomGraphView = AbstractPrimaryView.extend({
     id: 'graph_custom',
-    className: 'viewport cahrt0',
+    className: 'viewport linechart',
     contentParentSelector: null,
     widgetTemplate: 'GraphViewWidget',
     events: {
