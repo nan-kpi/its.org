@@ -78,7 +78,7 @@ var XChartView = AbstractPrimaryView.extend({
         myChart.update();
 
         this.hideLoader();
-        }
+        
     }
 }); 
 
