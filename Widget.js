@@ -1,6 +1,6 @@
 /* global AbstractPrimaryView, _, GraphMixin, GraphSelectionMixin */
 
-var GraphView = AbstractPrimaryView.extend({
+var CustomGraphView = AbstractPrimaryView.extend({
     id: 'graph',
     className: 'viewport graph1',
     contentParentSelector: null,
