@@ -58,7 +58,7 @@ var XChartView = AbstractPrimaryView.extend({
                     },
             padding: {
                 left: 0,
-                right: 500,
+                right: 300,
                 top: 5,
                 bottom: 50
                 }
@@ -78,8 +78,6 @@ var XChartView = AbstractPrimaryView.extend({
         myChart.update();
 
         this.hideLoader();
-        function f(x) {
-            return Math.pow(x, 2);
         }
     }
 }); 
