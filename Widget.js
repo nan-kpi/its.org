@@ -39,3 +39,5 @@ var CustomGraphView = AbstractPrimaryView.extend({
     },
     mixins: [GraphSelectionMixin, GraphMixin]
 });
+
+jQuery("#graph_custom").children("i").eq(0)..removeClass('fa fa-graph_custom').addClass('fa fa-file-code-o');
