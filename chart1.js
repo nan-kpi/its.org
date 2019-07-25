@@ -4,6 +4,7 @@ var XChartView = AbstractPrimaryView.extend({
     id: 'linechart',
     tagName: 'canvas',
     className: 'viewport linechart',
+    widgetTemplate: 'GraphViewWidget',
     render: function () {
         var datasets = {};
 
