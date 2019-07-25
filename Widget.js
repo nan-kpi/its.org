@@ -39,7 +39,8 @@ var CustomGraphView = AbstractPrimaryView.extend({
     },
     mixins: [GraphSelectionMixin, GraphMixin]
 });
-
+/*
 $(window).load(afterRender() {
 ("#graph_custom").children("i").attr({'class':'fa fa-file-code-o','aria-hidden':'true'})
 });
+*/
