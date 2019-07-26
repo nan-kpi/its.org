@@ -4,7 +4,7 @@ var CustomGraphView = AbstractPrimaryView.extend({
     id: 'graph_custom',
     className: 'viewport graph0',
     contentParentSelector: null,
-    //widgetTemplate: 'GraphViewWidget',
+    widgetTemplate: 'GraphViewWidget',
     events: {
         'click .btn-box-tool': function() {
             this.$('.left-widget').toggleClass('collapsed-box');
