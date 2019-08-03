@@ -1,4 +1,4 @@
- var SongView = Backbone.View.extend({
+ var YChartView = Backbone.View.extend({
 
     render:function(){
         this.$el.html("Hello World!");
