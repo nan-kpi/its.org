@@ -2,25 +2,23 @@
 
 var XChartView = AbstractPrimaryView.extend({
     id: 'linechart',
-//    tagName: 'canvas',    !do without canvas
+//    tagName: 'canvas',
     className: 'viewport linechart',
     widgetTemplate: 'LineChartViewWidget',
-
+//    contentTemplate: 'ChartMain',
     events: {
         'click .btn-box-tool': function() {
             this.$('.left-widget').toggleClass('collapsed-box');
         },
         'click input[type=checkbox]': function() {
-            //rebuild chart
+            //TODO rebuild chart
         }
     },
-    renderWidgerArguments: function(datasets) {
-        return {lol: '111111', that: this, datasets: datasets,
-        headers: _.map(datasets, function(value,key) {
-            return key;
+    renderWidgetArguments: function(datasets) {
+        return {lol: '111111', that: this, datasets: datasets, headers: _.map(datasets, function(value, key) {
+                return key;
         })};
     },
-
     render: function () {
         var datasets = {};
 
@@ -30,7 +28,7 @@ var XChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: '#000', //any
+                        borderColor: '#000', //random
                         borderWidth: 6,
                         fill: false
                     };
@@ -44,12 +42,11 @@ var XChartView = AbstractPrimaryView.extend({
             });
         });
 
-//myChart View---------------------------------------
-        
+//TODO remove datasets with all values = null
         this.$el.html('<canvas/>');
         this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
 
-        var myChart = new Chart(this.$el.children('canvas'[0], {
+        var myChart = new Chart(this.$el.children('canvas')[0], {
             type: 'bar',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
@@ -70,7 +67,7 @@ var XChartView = AbstractPrimaryView.extend({
                 },
                 title:{
                     display: true,
-                    text: 'Биков П.',
+                    text: 'Биков',
                     fontSize: 40
                 },
                 layout: {
@@ -98,7 +95,5 @@ var XChartView = AbstractPrimaryView.extend({
         this.resizeContent();
         myChart.update();
         this.hideLoader();
-        
     }
 }); 
-
