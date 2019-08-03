@@ -72,5 +72,4 @@ var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'da
       {
         alert("not defined");
       }
-    });
- }
+   
