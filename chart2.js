@@ -24,8 +24,7 @@
                 }
             });
         });
-    }
-
+   
 
 
 
@@ -69,7 +68,8 @@ var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'da
 
 
   }
-  else
-  {
-    alert("not defined");
-  }
+      else
+      {
+        alert("not defined");
+      }
+    });
