@@ -2,7 +2,7 @@
 
 var XChartView = AbstractPrimaryView.extend({
     id: 'linechart',
-    tagName: 'canvas',   
+//    tagName: 'canvas',    !do without canvas
     className: 'viewport linechart',
     widgetTemplate: 'LineChartViewWidget',
 
@@ -15,7 +15,7 @@ var XChartView = AbstractPrimaryView.extend({
         }
     },
     renderWidgerArguments: function(datasets) {
-        return {lol: 'Hello World', that: this, datasets: datasets,
+        return {lol: '111111', that: this, datasets: datasets,
         headers: _.map(datasets, function(value,key) {
             return key;
         })};
@@ -97,7 +97,6 @@ var XChartView = AbstractPrimaryView.extend({
 
         this.resizeContent();
         myChart.update();
-
         this.hideLoader();
         
     }
