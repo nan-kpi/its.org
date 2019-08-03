@@ -1,33 +1,10 @@
- var YChartView = AbstractPrimaryView.extend({
-    id: 'linechart2',
-    tagName: 'canvas',
-    className: 'viewport linechart',
-    render: function () {
-        var datasets = {};
+ var SongView = Backbone.View.extend({
 
-        _.each(this.model.getCurrentNodes(), function (node, idx) {
-            _.each(node.data, function(datum){
-                if(!_.has(datasets, datum.tclass)) {
-                    datasets[datum.tclass] = {
-                        label: datum.tclass,
-                        data: [],
-                        borderColor: 'red', //random
-                        borderWidth: 3,
-                        fill: false
-                    };
-                }
-                
-                if(!datum.isNumeric()) {
-                    datasets[datum.tclass].data.push(null);
-                } else {
-                    datasets[datum.tclass].data.push(datum.getValue());
-                }
-            });
-        });
-   
-
-
-
+    render:function(){
+        this.$el.html("Hello World!");
+        
+     
+     
 var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'day');
   g.setShowRes(1); // Show/Hide Responsible (0/1)
   g.setShowDur(1); // Show/Hide Duration (0/1)
@@ -73,3 +50,13 @@ var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'da
         alert("not defined");
       }
    
+     
+     
+     
+        return this;
+    }
+});
+
+
+
+
