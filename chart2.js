@@ -1,3 +1,32 @@
+var YChartView = AbstractPrimaryView.extend({
+    id: 'linechart2',
+    tagName: 'canvas',
+    className: 'viewport linechart',
+    render: function () {
+        var datasets = {};
+
+        _.each(this.model.getCurrentNodes(), function (node, idx) {
+            _.each(node.data, function(datum){
+                if(!_.has(datasets, datum.tclass)) {
+                    datasets[datum.tclass] = {
+                        label: datum.tclass,
+                        data: [],
+                        borderColor: 'red', //random
+                        borderWidth: 3,
+                        fill: false
+                    };
+                }
+                
+                if(!datum.isNumeric()) {
+                    datasets[datum.tclass].data.push(null);
+                } else {
+                    datasets[datum.tclass].data.push(datum.getValue());
+                }
+            });
+        });
+
+
+
 function diagramGantt(){
 		$(function() {
 			"use strict";
