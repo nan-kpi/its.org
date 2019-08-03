@@ -2,9 +2,25 @@
 
 var XChartView = AbstractPrimaryView.extend({
     id: 'linechart',
-    tagName: 'canvas',
+//    tagName: 'canvas',    !do without canvas
     className: 'viewport linechart',
-    widgetTemplate: 'GraphViewWidget',
+    widgetTemplate: 'LineChartViewWidget',
+
+    events: {
+        'click .btn-box-tool': function() {
+            this.$('.left-widget').toggleClass('collapsed-box');
+        },
+        'click input[type=checkbox]': function() {
+            //rebuild chart
+        }
+    },
+    renderWidgerArguments: function(datasets) {
+        return {lol: 'Hello World', that: this, datasets: datasets,
+        headers: _.map(datasets, function(value,key) {
+            return key;
+        })};
+    },
+
     render: function () {
         var datasets = {};
 
@@ -14,7 +30,7 @@ var XChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: '#000', //random
+                        borderColor: '#000', //any
                         borderWidth: 6,
                         fill: false
                     };
@@ -28,8 +44,12 @@ var XChartView = AbstractPrimaryView.extend({
             });
         });
 
+//myChart View---------------------------------------
+        
+        this.$el.html('<canvas/>');
+        this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
 
-        var myChart = new Chart(this.el, {
+        var myChart = new Chart(this.$el.children('canvas'[0], {
             type: 'bar',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
@@ -50,7 +70,7 @@ var XChartView = AbstractPrimaryView.extend({
                 },
                 title:{
                     display: true,
-                    text: 'Биков',
+                    text: 'Биков П.',
                     fontSize: 40
                 },
                 layout: {
@@ -83,4 +103,3 @@ var XChartView = AbstractPrimaryView.extend({
     }
 }); 
 
-$(".linechart").css("overflow","scroll");
