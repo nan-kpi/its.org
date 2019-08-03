@@ -2,7 +2,7 @@
 
 var XChartView = AbstractPrimaryView.extend({
     id: 'linechart',
-//    tagName: 'canvas',    !do without canvas
+    tagName: 'canvas',   
     className: 'viewport linechart',
     widgetTemplate: 'LineChartViewWidget',
 
