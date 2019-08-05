@@ -98,3 +98,5 @@ var XChartView = AbstractPrimaryView.extend({
         this.hideLoader();
     }
 }); 
+
+$(".box-title").html("CheckBox");
