@@ -9,9 +9,10 @@ var XChartView = AbstractPrimaryView.extend({
     events: {
         'click .btn-box-tool': function() {
             this.$('.left-widget').toggleClass('collapsed-box');
-            'click .for-selected': function() {
-            if(this.currentSelection.length == 0) return;
         },
+        'click .for-selected': function() {
+            if(this.currentSelection.length == 0) return;
+            
         'click input[type=checkbox]': function() {
             //TODO rebuild chart
         }
