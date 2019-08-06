@@ -1,11 +1,11 @@
-
+/*
 // These are the class/styles used by various objects in GanttChart.  However, Firefox has problems deciphering class style when DIVs are embedded in other DIVs.
 
 // GanttChart makes heavy use of embedded DIVS, thus the style are often embedded directly in the objects html.  If this could be resolved with Firefox, it would
 
 // make alot of the code look simpleer/cleaner without all the embedded styles
 
-
+*/
 
 ..gantt { font-family:tahoma, arial, verdana; font-size:10px;}
 
