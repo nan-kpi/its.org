@@ -1,3 +1,7 @@
+//Weâ€™ve detected the file encoding as ISO-8859-1. When you commit changes we will transcode it to UTF-8.
+
+
+
 /* 
    _        ___            _   _     _   ____  
   (_)___   / _ \__ _ _ __ | |_| |_  / | |___ \ 
@@ -1348,9 +1352,9 @@ JSGantt.folder= function (pID,ganttObj) {
             JSGantt.show(pID, 1, ganttObj);
 
                if (JSGantt.isIE()) 
-                  JSGantt.findObj('group_'+pID).innerText = '–';
+                  JSGantt.findObj('group_'+pID).innerText = 'Â–';
                else
-                  JSGantt.findObj('group_'+pID).textContent = '–';
+                  JSGantt.findObj('group_'+pID).textContent = 'Â–';
 
          }
 
@@ -1407,7 +1411,7 @@ JSGantt.show =  function (pID, pTop, ganttObj) {
          } else {
 
             if (JSGantt.isIE()) { // IE;
-               if( JSGantt.findObj('group_'+pID).innerText == '–') {
+               if( JSGantt.findObj('group_'+pID).innerText == 'Â–') {
                   JSGantt.findObj('child_'+vID).style.display = "";
                   JSGantt.findObj('childgrid_'+vID).style.display = "";
                   vList[i].setVisible(1);
@@ -1415,7 +1419,7 @@ JSGantt.show =  function (pID, pTop, ganttObj) {
 
             } else {
 
-               if( JSGantt.findObj('group_'+pID).textContent == '–') {
+               if( JSGantt.findObj('group_'+pID).textContent == 'Â–') {
                   JSGantt.findObj('child_'+vID).style.display = "";
                   JSGantt.findObj('childgrid_'+vID).style.display = "";
                   vList[i].setVisible(1);
@@ -1677,5 +1681,4 @@ JSGantt.benchMark = function(pItem){
    alert(pItem + ': Elapsed time: '+((vEndTime-vBenchTime)/1000)+' seconds.');
    vBenchTime=new Date().getTime();
 }
-
 
