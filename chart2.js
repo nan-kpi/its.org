@@ -5,7 +5,7 @@ var YChartView = AbstractPrimaryView.extend({
     render: function () {
         
      
-  var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'day');
+  var g = new JSGantt.GanttChart('g',this.el, 'day');
         
   g.setShowRes(1); // Show/Hide Responsible (0/1)
   g.setShowDur(1); // Show/Hide Duration (0/1)
