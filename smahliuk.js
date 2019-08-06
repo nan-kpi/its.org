@@ -1,4 +1,4 @@
-var SongView = Backbone.View.extend({
+var YChartView = AbstractPrimaryView.extend({
     id: 'linechart2',
     tagName: 'canvas',
     className: 'viewport linechart',
