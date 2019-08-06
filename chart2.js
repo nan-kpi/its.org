@@ -51,6 +51,10 @@ var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'da
         alert("not defined");
       }
    }
+      this.resizeContent();
+        myChart.update();
+        this.hideLoader();
+        function f(x) {return Math.pow(x, 2);
 }); 
 
 
