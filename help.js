@@ -1,3 +1,9 @@
+var YChartView = AbstractPrimaryView.extend({
+    id: 'linechart2',
+    tagName: 'canvas',
+    className: 'viewport linechart',
+    render: function () {
+
 google.charts.load('current', {'packages':['gantt']});
     google.charts.setOnLoadCallback(drawChart);
 
@@ -33,7 +39,14 @@ google.charts.load('current', {'packages':['gantt']});
         height: 275
       };
 
-      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+      var chart = new google.visualization.Gantt(document.getElementById('linechart2'));
 
       chart.draw(data, options);
     }
+
+ this.resizeContent();
+        g.update();
+        this.hideLoader();
+   }
+   
+}); 
