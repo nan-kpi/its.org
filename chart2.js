@@ -5,8 +5,9 @@ var YChartView = AbstractPrimaryView.extend({
     render: function () {
         
      
-     
-var g = new JSGantt.GanttChart('g',document.getElementById('linechart2'), 'day');
+  var myMeaningfulVariableName = new JSGantt.GanttChart('myMeaningfulVariableName',document.getElementById('GanttChartDIV'), 'day');
+  var g = myMeaningfulVariableName;
+        
   g.setShowRes(1); // Show/Hide Responsible (0/1)
   g.setShowDur(1); // Show/Hide Duration (0/1)
   g.setShowComp(1); // Show/Hide % Complete(0/1)
