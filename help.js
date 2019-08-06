@@ -43,10 +43,10 @@ google.charts.load('current', {'packages':['gantt']});
 
       chart.draw(data, options);
     }
-
+/*
  this.resizeContent();
         g.update();
-        this.hideLoader();
+        this.hideLoader();*/
    }
    
 }); 
