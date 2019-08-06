@@ -52,9 +52,8 @@ var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'da
       }
    }
       this.resizeContent();
-        myChart.update();
+        g.update();
         this.hideLoader();
-        function f(x) {return Math.pow(x, 2);
 }); 
 
 
