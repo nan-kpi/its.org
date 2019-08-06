@@ -84,4 +84,4 @@ var YChartView = AbstractPrimaryView.extend({
     }
 }); 
 
-$(".linechart").css("overflow","scroll");
+
