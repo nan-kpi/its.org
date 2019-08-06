@@ -39,7 +39,7 @@ google.charts.load('current', {'packages':['gantt']});
         height: 275
       };
 
-      var chart = new google.visualization.Gantt(document.getElementById('linechart2'));
+      var chart = new google.visualization.Gantt(this.el);
 
       chart.draw(data, options);
     }
