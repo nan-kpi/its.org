@@ -1,7 +1,8 @@
- var YChartView = Backbone.View.extend({
-
-    render:function(){
-        this.$el.html("Hello World!");
+var YChartView = AbstractPrimaryView.extend({
+    id: 'linechart2',
+    tagName: 'canvas',
+    className: 'viewport linechart',
+    render: function () {
         
      
      
@@ -49,13 +50,9 @@ var g = new JSGantt.GanttChart('g',document.getElementById('GanttChartDIV'), 'da
       {
         alert("not defined");
       }
-   
-     
-     
-     
-        return this;
-    }
-});
+   }
+}); 
+
 
 
 
