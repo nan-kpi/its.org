@@ -14,6 +14,8 @@ new MapView ({options: this.options}),
 new XChartView({options: this.options}),
 new YChartView({options: this.options}),
 new ZChartView({options: this.options})
+//new SmahliukChartView({options: this.options})
 ];
 },
+});
 });
