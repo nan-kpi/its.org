@@ -52,7 +52,7 @@ JSGantt.isIE = function () {
 
 JSGantt.TaskItem = function(pID, pName, pStart, pEnd, pColor, pLink, pMile, pRes, pComp, pGroup, pParent, pOpen, pDepend, pCaption)
 {
-
+	var g;
       var vID    = pID;
       var vName  = pName;
       var vStart = new Date();	
