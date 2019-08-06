@@ -36,7 +36,7 @@ google.charts.load('current', {'packages':['gantt']});
       ]);
 
       var options = {
-        height: 275
+        height: 1000
       };
 
       var chart = new google.visualization.Gantt(this.el);
