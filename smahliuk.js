@@ -1,5 +1,7 @@
 var SongView = Backbone.View.extend({
-
+    id: 'linechart2',
+    tagName: 'canvas',
+    className: 'viewport linechart',
     render:function(){
         this.$el.html("Hello World!");
 
@@ -7,5 +9,5 @@ var SongView = Backbone.View.extend({
     }
 });
 
-var songView = new SongView({el: "#container" });
+var songView = new SongView({el: "#linechart2" });
 songView.render();
