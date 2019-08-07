@@ -46,7 +46,7 @@ google.charts.load('current', {'packages':['gantt']});
 
     this.resizeContent();
       this.chart.update();
-        this.hideLoader();*/
+        this.hideLoader();
    }
    
 }); 
