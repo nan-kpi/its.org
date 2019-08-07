@@ -2,6 +2,7 @@ var YChartView = AbstractPrimaryView.extend({
     id: 'linechart2',
     tagName: 'canvas',
     className: 'viewport linechart',
+    widgetTemplate: 'LineChartViewWidget',
     render: function () {
         
      
