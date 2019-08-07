@@ -5,7 +5,7 @@ var YChartView = AbstractPrimaryView.extend({
     render: function () {
 
 google.charts.load('current', {'packages':['gantt']});
-    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(_.bind(drawChart, this));
 
     function daysToMilliseconds(days) {
       return days * 24 * 60 * 60 * 1000;
@@ -40,7 +40,7 @@ google.charts.load('current', {'packages':['gantt']});
       };
 
       var chart = new google.visualization.Gantt(this.el);
-
+        
       this.chart.draw(data, options);
     }
 
