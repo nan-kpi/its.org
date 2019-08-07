@@ -44,7 +44,7 @@ google.charts.load('current', {'packages':['gantt']});
       chart.draw(data, options);
         
         this.resizeContent();
-      chart.update();
+      this.chart.update();
         this.hideLoader();
     }
    }
