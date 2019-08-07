@@ -16,7 +16,7 @@ var XChartView = AbstractPrimaryView.extend({
         }
     },
     renderWidgetArguments: function(datasets) {
-        return {lol: '111111', that: this, datasets: datasets, headers: _.map(datasets, function(value, key) {
+        return {lol: 'Hello !World im here!', that: this, datasets: datasets, headers: _.map(datasets, function(value, key) {
                 return key;
         })};
     },
