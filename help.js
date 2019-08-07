@@ -39,9 +39,9 @@ google.charts.load('current', {'packages':['gantt']});
         height: 275
       };
 
-      var chart = new google.visualization.Gantt(this.chart);
+      var chart = new google.visualization.Gantt(this.el);
 
-      chart.draw(data, options);
+      thi.chart.draw(data, options);
     }
 
    /* this.resizeContent();
