@@ -42,11 +42,11 @@ google.charts.load('current', {'packages':['gantt']});
       var chart = new google.visualization.Gantt(this.el);
         
       chart.draw(data, options);
-    }
-
-    this.resizeContent();
-      this.chart.update();
+        
+        this.resizeContent();
+      chart.update();
         this.hideLoader();
+    }
    }
    
 }); 
