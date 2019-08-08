@@ -21,8 +21,7 @@ var YChartView = AbstractPrimaryView.extend({
                 data.addColumn('number', 'Duration');
                 data.addColumn('number', 'Percent Complete');
                 data.addColumn('string', 'Dependencies');
-
-                data.addRows([
+                var myDataSet = [
                     ['Research', 'Find sources',
                         new Date(2015, 0, 1), new Date(2015, 0, 5), null, 100, null],
                     ['Write', 'Write paper',
@@ -33,7 +32,8 @@ var YChartView = AbstractPrimaryView.extend({
                         null, new Date(2015, 0, 10), this.daysToMilliseconds(1), 0, 'Cite,Write'],
                     ['Outline', 'Outline paper',
                         null, new Date(2015, 0, 6), this.daysToMilliseconds(1), 100, 'Research']
-                ]);
+                ],
+                data.addRows(myDataSet);
 
                 var options = { 
                     height: 275, widht: 1000  //Розміри Chart - не впливає на вигляд
