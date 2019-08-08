@@ -36,7 +36,8 @@ var YChartView = AbstractPrimaryView.extend({
                 ]);
 
                 var options = {
-                    height: 600
+                    height: 275,
+                    widht: 1000
                 };
 
                 this.chart = new google.visualization.Gantt(this.el);
