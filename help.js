@@ -31,8 +31,12 @@ var YChartView = AbstractPrimaryView.extend({
                     ['Complete', 'Hand in paper',
                         null, new Date(2015, 0, 10), this.daysToMilliseconds(1), 0, 'Cite,Write'],
                     ['Outline', 'Outline paper',
-                        null, new Date(2015, 0, 6), this.daysToMilliseconds(1), 100, 'Research']
-                ],
+                        null, new Date(2015, 0, 6), this.daysToMilliseconds(1), 100, 'Research'],
+                    ['NewTEXT', 'Some text',
+                        null, new Date(2015, 0, 6), daysToMilliseconds(2), 80, 'Research'],
+                    ['New Program', 'StartNewProgram',
+                        new Date(2015, 0, 7), new Date(2015, 0, 12), null,  100,  null]
+                ];
                 data.addRows(myDataSet);
 
                 var options = { 
