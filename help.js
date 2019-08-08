@@ -35,9 +35,8 @@ var YChartView = AbstractPrimaryView.extend({
                         null, new Date(2015, 0, 6), this.daysToMilliseconds(1), 100, 'Research']
                 ]);
 
-                var options = {
-                    height: 275,
-                    widht: 1000
+                var options = { 
+                    height: 275, widht: 1000  //Розміри Chart - не впливає на вигляд
                 };
 
                 this.chart = new google.visualization.Gantt(this.el);
