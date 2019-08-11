@@ -1,7 +1,7 @@
 /* global AbstractPrimaryView, google, _ */
 
-var XChartView = AbstractPrimaryView.extend({
-    id: 'linechart4',
+var YChartView = AbstractPrimaryView.extend({
+    id: 'linechart2',
 //    tagName: 'canvas', !!!!! це тобі все і ломало. ти давав гугл чарту канвас замість дів-а
     className: 'viewport linechart',
     daysToMilliseconds: function (days) {//переніс функцію в методи класу
