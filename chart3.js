@@ -58,7 +58,7 @@ var ZChartView = AbstractPrimaryView.extend({
                     },
             padding: {
                 left: 10,
-                right: 100,
+                right: 300,
                 top: 10,
                 bottom: 20
                 }
