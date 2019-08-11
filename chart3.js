@@ -65,10 +65,10 @@ var ZChartView = AbstractPrimaryView.extend({
                 },
                 scales: {
                     xAxes: [{
-                        display: true
+                        display: false
                     }],
                     yAxes: [{
-                        display: true
+                        display: false
                     }]
                 }
             }
