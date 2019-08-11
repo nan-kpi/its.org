@@ -29,7 +29,7 @@ var ZChartView = AbstractPrimaryView.extend({
 
 
         var myChart = new Chart(this.el, {
-            type: 'pie',
+            type: 'polarArea',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
                 datasets: _.toArray(datasets)
