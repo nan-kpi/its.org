@@ -31,8 +31,8 @@ var ZChartView = AbstractPrimaryView.extend({
         var myChart = new Chart(this.el, {
             type: 'radar',
             data: {
-                labels: _.pluck(this.model.getCurrentNodes(), 'name'),
-                datasets: _.toArray(datasets)
+                labels: _.toArray(datasets),
+                datasets: _.pluck(this.model.getCurrentNodes(), 'name')
             },
             options: {
                 responsive: true,
