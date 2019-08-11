@@ -80,8 +80,8 @@ var YChartView = AbstractPrimaryView.extend({
                backgroundColor: {
                    fill: 'white'
                },
-             // height: 1600,
-               width: 1000,  
+               height: 1000,
+               //width: 1000,  
               gantt: {  
                   arrow: {
                     spaceAfter: 4, 
