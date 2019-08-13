@@ -7,6 +7,12 @@ var YChartView = AbstractPrimaryView.extend({
     daysToMilliseconds: function (days) {//переніс функцію в методи класу
         return days * 24 * 60 * 60 * 1000;
     },
+    
+   /* function daysToMilliseconds(days) {
+      return days * 24 * 60 * 60 * 1000;
+    }*/
+    
+    
     render: function () {
 
         google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
@@ -22,58 +28,34 @@ var YChartView = AbstractPrimaryView.extend({
                 data.addColumn('number', 'Duration');
                 data.addColumn('number', 'Percent Complete');
                 data.addColumn('string', 'Dependencies');
-                var TestDataSet = [
-                    ['Research', 'Find sources',
-                        new Date(2015, 0, 1), new Date(2015, 0, 5), null, 100, null],
-                    ['Write', 'Write paper',
-                        null, new Date(2015, 0, 9), this.daysToMilliseconds(3), 25, 'Research,Outline'],
-                    ['Cite', 'Create bibliography',
-                        null, new Date(2015, 0, 7), this.daysToMilliseconds(1), 20, 'Research'],
-                    ['Complete', 'Hand in paper',
-                        null, new Date(2015, 0, 10), this.daysToMilliseconds(1), 0, 'Cite,Write'],
-                    ['Outline', 'Outline paper',
-                        null, new Date(2015, 0, 6), this.daysToMilliseconds(1), 100, 'Research'],
-                    ['NewTEXT', 'Some text',
-                        null, new Date(2015, 0, 6), this.daysToMilliseconds(2), 80, 'Research'],
-                    ['New Program', 'StartNewProgram',
-                        new Date(2015, 0, 7), new Date(2015, 0, 12), null,  100,  null]
-                ];
-                var myDataSet = [
-            ['058467', 'Побудова Стадіону Голінський', '0',
-            new Date(2011, 2, 1), new Date(2012, 2, 11), null, 78, null],
+                
+                myDataSet = [
+            ['058467', 'Побудова Стадіону Голінський', 'Процес', new Date(2019, 2, 1), new Date(2020, 2, 11), null, 78, null],
+            ['000001', 'Пошук альтернатив', 'вфіаіфва', new Date(2019, 2, 1), new Date(2019, 7, 10), null, 78, null],
+            ['000002', 'Тестовий процес', '4546156', new Date(2019, 2, 1), new Date(2019, 6, 11), null, 78, null],
+        
+            ['071489','Виділення земельної ділянки','Територія',new Date(2019, 2, 1),new Date(2019, 2, 30) ,null,100, null],
             
-            ['071489','Виділення земельної ділянки','1',             
-             new Date(2011, 2, 1),new Date(2011, 2, 30) ,null,100, null],
+            ['074759','Оголошення тендеру','Тендер', new Date(2019, 2, 5),new Date(2019, 2, 16) ,null,100, null],
+            ['074760','Реєстрація пропозицій','Тендер', new Date(2019, 2, 16),new Date(2019, 2, 25) ,null,100, '074759'],
+            ['074761','Перевірка ліцензій','Тендер', new Date(2019, 2, 23),new Date(2019, 2, 27) ,null,100, '074759'],
+            ['074762','Огляд витрат','Тендер', new Date(2019, 2, 27),new Date(2019, 3, 10) ,null,100, '074759'],
+            ['074763','Укладення договору','Тендер', new Date(2019, 3, 10),new Date(2019, 3, 16) ,null,100, '074759'],
             
-            ['074759','Тендер: оголошення тендеру','2',
-             new Date(2011, 2, 5),new Date(2011, 2, 16) ,null,100, null],
-            ['074760','Тендер: реєстрація пропозицій','2',
-             new Date(2011, 2, 16),new Date(2011, 2, 25) ,null,100, '074759'],
-            ['074761','Тендер: перевірка ліцензій','2',
-             new Date(2011, 2, 23),new Date(2011, 2, 27) ,null,100, '074759'],
-            ['074762','Тендер: огляд витрат','2',
-             new Date(2011, 2, 27),new Date(2011, 3, 10) ,null,100, '074759'],
-            ['074763','Тендер: укладення договору','2',
-             new Date(2011, 3, 10),new Date(2011, 3, 16) ,null,100, '074759'],
+            ['086457','Закупівля матеріалів','Матеріали', new Date(2019, 4, 1),new Date(2019, 6, 10) ,null,80, '074763'],
             
-            ['086457','Закупівля матеріалів','3',
-             new Date(2011, 4, 1),new Date(2011, 6, 10) ,null,80, '074763'],
-            
-            ['097458','Побудова частин стадіону: фасад','4',
-             new Date(2011, 5, 26),new Date(2011, 8, 10) ,null,88, '086457'],
-            ['097459','Побудова частин стадіону: дах','4',
-             new Date(2011, 7, 26),new Date(2011, 12, 10) ,null,90, '086457'],
-            ['097461','Побудова частин стадіону: ліве крило','4',
-             new Date(2011, 8, 10),new Date(2011, 8, 26) ,null, 82, '086457'],
-            ['097462','Побудова частин стадіону: праве крило','4',
-             new Date(2011, 9, 26),new Date(2011, 11, 10) ,null,35, '086457'],
-            ['097463','Кінцеві роботи','4',
-             new Date(2012,0, 15),new Date(2012, 1,28) ,null,100, '086457'],
-            ['097460','Контроль термінів будування','4',
-             new Date(2012,1, 28),new Date(2012, 2, 6) ,null,100, '086457'],
-            ['125465','Відкриття стадіону','5',
-             new Date(2012,2, 10),new Date(2012, 2, 11) ,null,100, '086457'],
+            ['097458','Фасад','Побудова стадіону', new Date(2019, 5, 26),new Date(2019, 8, 10) ,null,88, '086457'],
+            ['097459','Дах','Побудова стадіону', new Date(2019, 7, 26),new Date(2019, 12, 10) ,null,90, '086457'],
+            ['097461','Ліве крило','Побудова стадіону', new Date(2019, 8, 10),new Date(2019, 8, 26) ,null, 82, '086457'],
+            ['097462','Праве крило','Побудова стадіону', new Date(2019, 9, 26),new Date(2019, 11, 10) ,null,35, '086457'],
+            ['097463','Кінцеві роботи','Побудова стадіону', new Date(2020,0, 15),new Date(2020, 1,28) ,null,60, '086457'],
+            ['097460','Контроль термінів будування','Побудова стадіону', new Date(2020,1, 28),new Date(2020, 2, 6) ,null,75, '086457'],
+            ['125465','Відкриття стадіону','Заходи', new Date(2020,2, 10),new Date(2020, 2, 11) ,null,50, '086457'],
         ];
+              /*  for(var i = 0; i < myDataSet.length; i++){
+            myDataSet[i][2] = DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
+        }/
+               
                 data.addRows(myDataSet);
 
                    var options = {
