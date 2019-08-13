@@ -54,7 +54,7 @@ var YChartView = AbstractPrimaryView.extend({
         ];
               /*  for(var i = 0; i < myDataSet.length; i++){
             myDataSet[i][2] = DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
-        }/
+        }*/
                
                 data.addRows(myDataSet);
 
