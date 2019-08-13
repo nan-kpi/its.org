@@ -67,7 +67,7 @@ var YChartView = AbstractPrimaryView.extend({
               for(var i = 0; i < myDataSet.length; i++){
             myDataSet[i][2] = this.DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
         }
-               myDataSet[0][6] = PercentComplete(myDataSet);
+               myDataSet[0][6] = this.PercentComplete(myDataSet);
                 
                 data.addRows(myDataSet);
 
