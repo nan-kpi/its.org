@@ -14,7 +14,7 @@ var YChartView = AbstractPrimaryView.extend({
                 }
             else {overdue = overdue; }
         return overdue;
-    }
+    },
    
     render: function () {
 
