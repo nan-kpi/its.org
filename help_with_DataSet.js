@@ -22,6 +22,7 @@ var YChartView = AbstractPrimaryView.extend({
         google.charts.setOnLoadCallback(_.bind(function () {
             this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
                 
+                var today = new Date();
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Task ID');
                 data.addColumn('string', 'Task Name');
