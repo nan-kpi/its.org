@@ -8,11 +8,14 @@ var YChartView = AbstractPrimaryView.extend({
         return days * 24 * 60 * 60 * 1000;
     },
     
-   /* function daysToMilliseconds(days) {
-      return days * 24 * 60 * 60 * 1000;
-    }*/
-    
-    
+    DeadLine: function (overdue, deadLine, today,  completed){        
+                if (completed != 100  && deadLine.getTime() < today.getTime()){
+                    return overdue ='Перебільшення виділеного часу!!!'; 
+                }
+            else {overdue = overdue; }
+        return overdue;
+    }
+   
     render: function () {
 
         google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
@@ -52,9 +55,9 @@ var YChartView = AbstractPrimaryView.extend({
             ['097460','Контроль термінів будування','Побудова стадіону', new Date(2020,1, 28),new Date(2020, 2, 6) ,null,75, '086457'],
             ['125465','Відкриття стадіону','Заходи', new Date(2020,2, 10),new Date(2020, 2, 11) ,null,50, '086457'],
         ];
-              /*  for(var i = 0; i < myDataSet.length; i++){
-            myDataSet[i][2] = DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
-        }*/
+              for(var i = 0; i < myDataSet.length; i++){
+            myDataSet[i][2] = this.DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
+        }
                
                 data.addRows(myDataSet);
 
@@ -76,7 +79,7 @@ var YChartView = AbstractPrimaryView.extend({
 
                   percentEnabled: true,
 
-                  trackHeight: 40,
+                  trackHeight: 35,
 
                   //innerGridHorizLine: null,
 
