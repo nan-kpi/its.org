@@ -15,6 +15,14 @@ var YChartView = AbstractPrimaryView.extend({
             else {overdue = overdue; }
         return overdue;
     },
+    
+    PercentComplete: function(array) {
+        var persent = 0;
+        for(var i = 1; i < array.length; i++){
+            persent += array[i][6];
+        }
+      return Math.floor(persent/(array.length+1));
+    },
    
     render: function () {
 
@@ -59,7 +67,8 @@ var YChartView = AbstractPrimaryView.extend({
               for(var i = 0; i < myDataSet.length; i++){
             myDataSet[i][2] = this.DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
         }
-               
+               myDataSet[0][6] = PercentComplete(myDataSet);
+                
                 data.addRows(myDataSet);
 
                    var options = {
