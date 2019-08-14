@@ -21,7 +21,7 @@ var YChartView = AbstractPrimaryView.extend({
         for(var i = 1; i < array.length; i++){
             persent += array[i][6];
         }
-      return Math.floor(persent/(array.length+1));
+      return Math.floor(persent/(array.length));
     },
    
     render: function () {
