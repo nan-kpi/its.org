@@ -8,7 +8,7 @@ var XChartView = AbstractPrimaryView.extend({
 //    contentTemplate: 'ChartMain',
     events: {
         'click .btn-box-tool': function() {
-            this.$('.left-widget').toggleClass('.collapse.show-box');
+            this.$('.left-widget').toggleClass('.collapse-box');
         },
             
         'click input[type=checkbox]': function() {
