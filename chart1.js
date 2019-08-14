@@ -29,7 +29,7 @@ var XChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: '#000', //ANY
+                        borderColor: '#8080', //ANY
                         borderWidth: 1,
                         fill: false
                     };
@@ -69,7 +69,7 @@ var XChartView = AbstractPrimaryView.extend({
                 title:{
                     display: true,
                     text: 'Биков П.',
-                    fontSize: 40
+                    fontSize: 35
                 },
                 layout: {
                     margin: {
