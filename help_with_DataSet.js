@@ -87,15 +87,15 @@ var YChartView = AbstractPrimaryView.extend({
                 
                 
 
-                var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Task ID');
-                data.addColumn('string', 'Task Name');
-                data.addColumn('string', 'Resource');
-                data.addColumn('date', 'Start Date');
-                data.addColumn('date', 'End Date');
-                data.addColumn('number', 'Duration');
-                data.addColumn('number', 'Percent Complete');
-                data.addColumn('string', 'Dependencies');
+                var Data = new google.visualization.DataTable();
+                Data.addColumn('string', 'Task ID');
+                Data.addColumn('string', 'Task Name');
+                Data.addColumn('string', 'Resource');
+                Data.addColumn('date', 'Start Date');
+                Data.addColumn('date', 'End Date');
+                Data.addColumn('number', 'Duration');
+                Data.addColumn('number', 'Percent Complete');
+                Data.addColumn('string', 'Dependencies');
                 
                 myDataSet = [
             ['058467', 'Побудова Стадіону Голінський', 'Процес', new Date(2019, 2, 1), new Date(2020, 2, 11), null, 78, null],
@@ -127,7 +127,7 @@ var YChartView = AbstractPrimaryView.extend({
                myDataSet[0][6] = this.PercentComplete(myDataSet);
                *************************************************************** */
                 
-                data.addRows(datasets);
+                Data.addRows(datasets);
 
                    var options = {
                backgroundColor: {
@@ -166,7 +166,7 @@ var YChartView = AbstractPrimaryView.extend({
 
                 this.chart = new google.visualization.Gantt(this.el);
 
-                this.chart.draw(data, options);
+                this.chart.draw(Data, options);
 
                 this.resizeContent(); //це має бути вкінці рендера
                 
