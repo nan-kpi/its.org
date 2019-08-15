@@ -8,7 +8,7 @@ var ZChartView = AbstractPrimaryView.extend({
         var datasets = {};
 
         _.each(this.model.getCurrentNodes(), function (node, idx) {
-            _.each(node.data, function(datum){
+            _.each(node.data, function(datum){/*
                 if(!_.has(datasets, datum.tclass)) {
                     datasets[datum.tclass] = {
                         label: datum.tclass,
@@ -18,7 +18,7 @@ var ZChartView = AbstractPrimaryView.extend({
                         fill: true
                     };
                 }
-                
+                */
                 if(!datum.isNumeric()) {
                     datasets[datum.tclass].data.push(null);
                 } else {
