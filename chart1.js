@@ -36,11 +36,37 @@ var XChartView = AbstractPrimaryView.extend({
                         fill: false
                     };
                 }
-                
+                /*
                 if(!datum.isNumeric()) {
                     datasets[datum.tclass].data.push(null);
                 } else {
                     datasets[datum.tclass].data.push(datum.getValue());
+                }*/
+                 if(datum.tclass == "Task ID") {
+                    datasets[datum.tclass].data.push(1); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "Task Name") {
+                    datasets[datum.tclass].data.push(2); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "Resource") {
+                    datasets[datum.tclass].data.push(3); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "Start Date") {
+                    datasets[datum.tclass].data.push(4); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "DeadLine") {
+                    datasets[datum.tclass].data.push(5); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "Duration") {
+                    datasets[datum.tclass].data.push(6); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "Percent Complete") {
+                    datasets[datum.tclass].data.push(7); //Вставити у відповідне місце у масиві
+                }
+                if(datum.tclass == "Dependencies") {
+                    datasets[datum.tclass].data.push(8); //Вставити у відповідне місце у масиві
+                }else {
+                    datasets[datum.tclass].data.push(10); //Останній варіант - сповістить про помилку введення
                 }
             });
         });
