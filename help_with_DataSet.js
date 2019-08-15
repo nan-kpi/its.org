@@ -25,6 +25,29 @@ var YChartView = AbstractPrimaryView.extend({
     },
    
     render: function () {
+        
+        var datasets = {};
+
+        _.each(this.model.getCurrentNodes(), function (node, idx) {
+            _.each(node.data, function(datum){
+                if(!_.has(datasets, datum.tclass)) {
+                    datasets[datum.tclass] = {
+                        label: datum.tclass,
+                        data: [],
+                        borderColor: 'orange', //random
+                        borderWidth: 6,
+                        fill: true
+                    };
+                }
+                
+                if(!datum.isNumeric()) {
+                    datasets[datum.tclass].data.push(null);
+                } else {
+                    datasets[datum.tclass].data.push(datum.getValue());
+                }
+            });
+        });
+        
 
         google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
         google.charts.setOnLoadCallback(_.bind(function () {
