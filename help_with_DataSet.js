@@ -25,8 +25,12 @@ var YChartView = AbstractPrimaryView.extend({
     },
    
     render: function () {
-        
-        var datasets = {};
+        google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
+        google.charts.setOnLoadCallback(_.bind(function () {
+            this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
+                
+                /*********************************************************************/
+                var datasets = {};
 
         _.each(this.model.getCurrentNodes(), function (node, idx) {
             _.each(node.data, function(datum){
@@ -47,11 +51,10 @@ var YChartView = AbstractPrimaryView.extend({
                 }
             });
         });
-        
-
-        google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
-        google.charts.setOnLoadCallback(_.bind(function () {
-            this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
+                
+                /***************************************************************************/
+                
+                
                 
                 var today = new Date();
                 var data = new google.visualization.DataTable();
