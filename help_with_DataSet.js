@@ -31,7 +31,7 @@ var YChartView = AbstractPrimaryView.extend({
             this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
                 
                 /*********************************************************************/
-                var datasets = {};
+                var datasets = [];
 
         _.each(this.model.getCurrentNodes(), function (node, idx) {
             _.each(node.data, function(datum){
@@ -119,7 +119,7 @@ var YChartView = AbstractPrimaryView.extend({
                myDataSet[0][6] = this.PercentComplete(myDataSet);
                *************************************************************** */
                 
-                data.addRows(myDataSet);
+                data.addRows(datasets);
 
                    var options = {
                backgroundColor: {
