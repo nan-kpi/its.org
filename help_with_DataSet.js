@@ -31,7 +31,7 @@ var YChartView = AbstractPrimaryView.extend({
          var datasets = [];
 
         _.each(this.model.getCurrentNodes(), function (node, idx) {
-            _.each(node.data, function(datum){/*
+            _.each(node.data, function(datum){
                 if(!_.has(datasets, datum.tclass)) {
                     datasets[datum.tclass] = {
                         label: datum.tclass,
@@ -40,7 +40,7 @@ var YChartView = AbstractPrimaryView.extend({
                         borderWidth: 6,
                         fill: true
                     };
-                }*/
+                }
                 
                if(datum.tclass == "Task ID") {
                     datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
