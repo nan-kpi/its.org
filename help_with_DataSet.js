@@ -8,7 +8,8 @@ var YChartView = AbstractPrimaryView.extend({
         return days * 24 * 60 * 60 * 1000;
     },
     
-    DeadLine: function (overdue, deadLine, today,  completed){        
+    DeadLine: function (overdue, deadLine, completed){ 
+                var today = new Date();
                 if (completed != 100  && deadLine.getTime() < today.getTime()){
                     return overdue ='Перебільшення виділеного часу!!!'; 
                 }
@@ -56,7 +57,7 @@ var YChartView = AbstractPrimaryView.extend({
                 
                 
                 
-                var today = new Date();
+
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Task ID');
                 data.addColumn('string', 'Task Name');
@@ -92,7 +93,7 @@ var YChartView = AbstractPrimaryView.extend({
         ];
                 /***************************************************************
               for(var i = 0; i < myDataSet.length; i++){
-            myDataSet[i][2] = this.DeadLine(myDataSet[i][2], myDataSet[i][4], today,  myDataSet[i][6]);
+            myDataSet[i][2] = this.DeadLine(myDataSet[i][2], myDataSet[i][4],  myDataSet[i][6]);
         }
                myDataSet[0][6] = this.PercentComplete(myDataSet);
                *************************************************************** */
