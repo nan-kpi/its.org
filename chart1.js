@@ -10,6 +10,13 @@ var XChartView = AbstractPrimaryView.extend({
         'click .btn-box-tool': function() {
              this.$('.left-widget').toggleClass('collapsed-box');
         },
+        function chart1(id){
+  if(this.checked) {
+     alert('checked');
+  }else{
+     alert('unchecked');
+  }
+},
             
         'click input[type=checkbox]': function chart() {
             this.chart.update();
