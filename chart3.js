@@ -26,6 +26,9 @@ var ZChartView = AbstractPrimaryView.extend({
                 }
             });
         });
+            console.log('Simple');
+        console.log(datasets);
+        console.log('HARD');
             console.log(_.toArray(datasets));
 
         var myChart = new Chart(this.el, {
