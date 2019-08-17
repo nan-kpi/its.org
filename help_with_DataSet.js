@@ -109,14 +109,15 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 else {
                     datasets[datum.tclass].push(10); //Останній варіант - сповістить про помилку введення
                 }
-                console.log(datasets[datum.tclass]);
+                //console.log(datasets[datum.tclass]);
                 
             });
         });
         
                 
-                
-                
+                console.log(datasets[datum.tclass]);
+                console.log('NEXT');
+                console.log(_.toArray(datasets[datum.tclass]));
                 /**********************************************************************/
                 
 
