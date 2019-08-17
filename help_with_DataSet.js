@@ -28,11 +28,6 @@ var YChartView = AbstractPrimaryView.extend({
     
     
     render: function () {
-         
-        
-        
-        
-        
         google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
         google.charts.setOnLoadCallback(_.bind(function () {
             this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
@@ -42,7 +37,7 @@ var YChartView = AbstractPrimaryView.extend({
                 var datasets = {};
         
         
-         var testDataSets = [];
+         var testDataSets = [][];
         
          console.log(this.model.getCurrentNodes());
 /***************************************************
