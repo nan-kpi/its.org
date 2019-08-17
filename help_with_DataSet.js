@@ -74,10 +74,10 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 }  */
                 
                 
-                
+                //note.set({title: "March 20", content: "In his eyes she eclipses..."});
                 
                if(datum.tclass == "Task ID") {
-                   datasets[datum.tclass].set('Task_ID', content: datum.getValue()); //Вставити у відповідне місце у масиві
+                   datasets[datum.tclass].set({Task_ID: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[0].push(datum.getValue());
                 } else
                 if(datum.tclass == "Task Name") {
