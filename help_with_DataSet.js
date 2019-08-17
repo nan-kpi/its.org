@@ -36,7 +36,7 @@ var YChartView = AbstractPrimaryView.extend({
 
                 var datasets = [];
        
-        
+         var bigDataSets = [];
          var testDataSets = [];
         
          
@@ -116,11 +116,9 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 
                 
                 _.each(this.model.getCurrentNodes(), function (node, idx) { 
-            _.each(node.data, function(datum){
-               
+          
                 console.log(datasets[datum.tclass]);
                 
-            });
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
                 
                 
