@@ -37,7 +37,7 @@ var YChartView = AbstractPrimaryView.extend({
                 var datasets = {};
         
         
-         var testDataSets = [][];
+         var testDataSets = [];
         
          console.log(this.model.getCurrentNodes());
 /***************************************************
