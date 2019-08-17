@@ -73,7 +73,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                     datasets[datum.tclass].data.push(datum.getValue());
                 }  */
                 
-                console.log(datasets[datum.tclass]);
+                
                 
                 
                if(datum.tclass == "Task ID") {
@@ -110,7 +110,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 }else {
                     datasets[datum.tclass].data.push(10); //Останній варіант - сповістить про помилку введення
                 }
-                
+                console.log(datasets[datum.tclass]);
                 
             });
         });
