@@ -77,15 +77,15 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 
                 
                if(datum.tclass == "Task ID") {
-                   datasets[datum.tclass].set('Task_ID', datum.getValue()); //Вставити у відповідне місце у масиві
+                   datasets[datum.tclass].set('Task_ID', content: datum.getValue()); //Вставити у відповідне місце у масиві
                     //this.testDataSets[0].push(datum.getValue());
                 } else
                 if(datum.tclass == "Task Name") {
-                    datasets[datum.tclass].set('Task_Name', datum.getValue()); //Вставити у відповідне місце у масиві
+                    datasets[datum.tclass].set('Task_Name', content: datum.getValue()); //Вставити у відповідне місце у масиві
                     //this.testDataSets[1].push(datum.getValue());
                 } else
                 if(datum.tclass == "Resource") {
-                    datasets[datum.tclass].set('Resource',datum.getValue()); //Вставити у відповідне місце у масиві
+                    datasets[datum.tclass].set('Resource', content: datum.getValue()); //Вставити у відповідне місце у масиві
                    //this.testDataSets[2].push(datum.getValue());
                 } else
                 if(datum.tclass == "Start Date") {
