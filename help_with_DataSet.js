@@ -127,7 +127,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 
                 _.each(this.model.getCurrentNodes(), function (node, idx) {
             _.each(node.data, function(datum){
-               testDataSets = this.Transpose(datasets)
+               testDataSets = this.Transpose(datasets);
                console.log(testDataSets[datum.tclass]);
 
             });
