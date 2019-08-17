@@ -17,6 +17,15 @@ var YChartView = AbstractPrimaryView.extend({
         return overdue;
     },
     
+    
+      Transpose: function (arr) {
+          return Object.keys(arr[0]).map(function (c) {
+            return arr.map(function (r) {
+              return r[c];
+            });
+        });
+    },    
+    
     PercentComplete: function(array) {
         var persent = 0;
         for(var i = 1; i < array.length; i++){
@@ -35,7 +44,7 @@ var YChartView = AbstractPrimaryView.extend({
                 /*********************************************************************/
 
                 var datasets = [];
-       
+       var i,j = 0;
          var bigDataSets = [];
          var testDataSets = [];
         
@@ -115,12 +124,17 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
                 
                 
-                _.each(this.model.getCurrentNodes(), function (node, idx,datum) { 
-          
-                console.log(datasets[datum.tclass]);
                 
-        }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
+                _.each(this.model.getCurrentNodes(), function (node, idx) {
+            _.each(node.data, function(datum){
                 
+               console.log(datasets[datum.tclass]);
+
+            });
+        });
+                
+               
+         
                 
        
                 /**********************************************************************/
