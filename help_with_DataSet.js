@@ -57,6 +57,14 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                     };
                 }
                 
+                if(!datum.isNumeric()) {
+                    datasets[datum.tclass].data.push(null);
+                } else {
+                    datasets[datum.tclass].data.push(datum.getValue());
+                }              
+                
+                
+                /*
                if(datum.tclass == "Task ID") {
                     this.testDataSets[0].push(datum.getValue()); //Вставити у відповідне місце у масиві
                 } else
@@ -89,7 +97,9 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                     this.testDataSets[7].push(datum.getValue());
                 }else {
                     datasets[datum.tclass].data.push(10); //Останній варіант - сповістить про помилку введення
-                }
+                }*/
+                
+                
             });
         });
         
