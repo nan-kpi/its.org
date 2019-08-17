@@ -77,9 +77,12 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 //note.set({title: "March 20", content: "In his eyes she eclipses..."});
                 
                if(datum.tclass == "Task ID") {
-                   datasets[datum.tclass].set({Task_ID: datum.getValue()}); //Вставити у відповідне місце у масиві
+                   datasets[datum.tclass].Task_ID.push(datum.getValue());
+                   //datasets[datum.tclass].set({Task_ID: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[0].push(datum.getValue());
-                } else
+                } 
+                /*
+                else
                 if(datum.tclass == "Task Name") {
                     datasets[datum.tclass].set({Task_Name: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[1].push(datum.getValue());
@@ -107,7 +110,10 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 if(datum.tclass == "Dependencies") {
                     datasets[datum.tclass].set({Dependencies: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[7].push(datum.getValue());
-                }else {
+                }
+                
+                */
+                else {
                     datasets[datum.tclass].data.push(10); //Останній варіант - сповістить про помилку введення
                 }
                 console.log(datasets[datum.tclass]);
