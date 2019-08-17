@@ -39,7 +39,7 @@ var YChartView = AbstractPrimaryView.extend({
         
          var testDataSets = [];
         
-         console.log(this.model.getCurrentNodes());
+         
 /***************************************************
 _.each(list, iteratee, [context]) - Проходит по всему списку элементов, вызывая для каждого из них функцию iteratee,
 которая будет вызвана в контексте context, если он был передан.
@@ -62,7 +62,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 } else {
                     datasets[datum.tclass].data.push(datum.getValue());
                 }              
-                
+                console.log(datasets[datum.tclass].data);
                 
                 /*
                if(datum.tclass == "Task ID") {
@@ -150,7 +150,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
              
                 //testDataSets
                // Data.addRows(myDataSet);
-                Data.addRows(this.testDataSets);
+                Data.addRows(myDataSet);
 
                    var options = {
                backgroundColor: {
