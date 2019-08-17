@@ -115,7 +115,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
                 
                 
-                _.each(this.model.getCurrentNodes(), function (node, idx) { 
+                _.each(this.model.getCurrentNodes(), function (node, idx,datum) { 
           
                 console.log(datasets[datum.tclass]);
                 
