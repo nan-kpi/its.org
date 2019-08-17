@@ -80,10 +80,7 @@ var YChartView = AbstractPrimaryView.extend({
             this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
                 
                 /*********************************************************************/
-               
-                
-                /***************************************************************************/
-                
+
                 
                 
 
@@ -120,14 +117,14 @@ var YChartView = AbstractPrimaryView.extend({
             ['097460','Контроль термінів будування','Побудова стадіону', new Date(2020,1, 28),new Date(2020, 2, 6) ,null,75, '086457'],
             ['125465','Відкриття стадіону','Заходи', new Date(2020,2, 10),new Date(2020, 2, 11) ,null,50, '086457'],
         ];
-                /***************************************************************
+               
               for(var i = 0; i < myDataSet.length; i++){
             myDataSet[i][2] = this.DeadLine(myDataSet[i][2], myDataSet[i][4],  myDataSet[i][6]);
         }
                myDataSet[0][6] = this.PercentComplete(myDataSet);
-               *************************************************************** */
+             
                 
-                Data.addRows(datasets);
+                Data.addRows(myDataSet);
 
                    var options = {
                backgroundColor: {
