@@ -51,53 +51,65 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
+                        
+                        Task_ID: null,
+                        Task_Name: null,
+                        Resource: null,
+                        Start_Date: null,
+                        DeadLine: null,
+                        Duration: null,
+                        Percent_Complete: null,
+                        Dependencies: null,
+                        
                         borderColor: 'orange', //random
                         borderWidth: 6,
                         fill: true
                     };
                 }
-                
+                /*
                 if(!datum.isNumeric()) {
                     datasets[datum.tclass].data.push(null);
                 } else {
                     datasets[datum.tclass].data.push(datum.getValue());
-                }              
-                console.log(datasets[datum.tclass].data);
+                }  */
                 
-                /*
+                console.log(datasets[datum.tclass]);
+                
+                
                if(datum.tclass == "Task ID") {
-                    this.testDataSets[0].push(datum.getValue()); //Вставити у відповідне місце у масиві
+                   datasets[datum.tclass].Task_ID.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                    //this.testDataSets[0].push(datum.getValue());
                 } else
                 if(datum.tclass == "Task Name") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    this.testDataSets[1].push(datum.getValue());
+                    datasets[datum.tclass].Task_Name.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                    //this.testDataSets[1].push(datum.getValue());
                 } else
                 if(datum.tclass == "Resource") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                   this.testDataSets[2].push(datum.getValue());
+                    datasets[datum.tclass].Resource.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                   //this.testDataSets[2].push(datum.getValue());
                 } else
                 if(datum.tclass == "Start Date") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    this.testDataSets[3].push(datum.getValue());
+                    datasets[datum.tclass].Start_Date.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                    //this.testDataSets[3].push(datum.getValue());
                 } else
                 if(datum.tclass == "DeadLine") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    this.testDataSets[4].push(datum.getValue());
+                    datasets[datum.tclass].DeadLine.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                   // this.testDataSets[4].push(datum.getValue());
                 } else
                 if(datum.tclass == "Duration") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    this.testDataSets[5].push(datum.getValue());
+                    datasets[datum.tclass].Duration.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                    //this.testDataSets[5].push(datum.getValue());
                 } else
                 if(datum.tclass == "Percent Complete") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    this.testDataSets[6].push(datum.getValue());
+                    datasets[datum.tclass].Percent_Complete.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                    //this.testDataSets[6].push(datum.getValue());
                 } else
                 if(datum.tclass == "Dependencies") {
-                    //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    this.testDataSets[7].push(datum.getValue());
+                    datasets[datum.tclass].Dependencies.set(datum.getValue()); //Вставити у відповідне місце у масиві
+                    //this.testDataSets[7].push(datum.getValue());
                 }else {
                     datasets[datum.tclass].data.push(10); //Останній варіант - сповістить про помилку введення
-                }*/
+                }
                 
                 
             });
