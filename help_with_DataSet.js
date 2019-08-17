@@ -52,8 +52,8 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                         label: datum.tclass,
                         data: [],
                         
-                        Task_ID: null,
-                        Task_Name: null,
+                        Task_ID: [],
+                        Task_Name: [],
                         Resource: null,
                         Start_Date: null,
                         DeadLine: null,
@@ -81,12 +81,15 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                    //datasets[datum.tclass].set({Task_ID: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[0].push(datum.getValue());
                 } 
-                /*
+                
                 else
                 if(datum.tclass == "Task Name") {
-                    datasets[datum.tclass].set({Task_Name: datum.getValue()}); //Вставити у відповідне місце у масиві
+                    datasets[datum.tclass].Task_Name.push(datum.getValue());
+                    //datasets[datum.tclass].set({Task_Name: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[1].push(datum.getValue());
-                } else
+                }
+                /*
+                else
                 if(datum.tclass == "Resource") {
                     datasets[datum.tclass].set({Resource: datum.getValue()}); //Вставити у відповідне місце у масиві
                    //this.testDataSets[2].push(datum.getValue());
