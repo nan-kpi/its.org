@@ -34,8 +34,8 @@ var YChartView = AbstractPrimaryView.extend({
                 
                 /*********************************************************************/
 
-                var datasets = {};
-        
+                var datasets = [];
+       
         
          var testDataSets = [];
         
@@ -48,23 +48,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
         _.each(this.model.getCurrentNodes(), function (node, idx) { 
             _.each(node.data, function(datum){
                 if(!_.has(datasets, datum.tclass)) {
-                    datasets[datum.tclass] = {
-                        label: datum.tclass,
-                        data: [],
-                        
-                        Task_ID: [],
-                        Task_Name: [],
-                        Resource: null,
-                        Start_Date: null,
-                        DeadLine: null,
-                        Duration: null,
-                        Percent_Complete: null,
-                        Dependencies: null,
-                        
-                        borderColor: 'orange', //random
-                        borderWidth: 6,
-                        fill: true
-                    };
+                    datasets[datum.tclass] = [];
                 }
                 /*
                 if(!datum.isNumeric()) {
@@ -77,14 +61,14 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 //note.set({title: "March 20", content: "In his eyes she eclipses..."});
                 
                if(datum.tclass == "Task ID") {
-                   datasets[datum.tclass].Task_ID.push(datum.getValue());
+                   datasets[datum.tclass].push(datum.getValue());
                    //datasets[datum.tclass].set({Task_ID: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[0].push(datum.getValue());
                 } 
                 
                 else
                 if(datum.tclass == "Task Name") {
-                    datasets[datum.tclass].Task_Name.push(datum.getValue());
+                    datasets[datum.tclass].push(datum.getValue());
                     //datasets[datum.tclass].set({Task_Name: datum.getValue()}); //Вставити у відповідне місце у масиві
                     //this.testDataSets[1].push(datum.getValue());
                 }
