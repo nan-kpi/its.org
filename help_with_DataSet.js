@@ -47,8 +47,9 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
         
         _.each(this.model.getCurrentNodes(), function (node, idx) { 
             _.each(node.data, function(datum){
-                if(!_.has(datasets, datum.tclass)) {
+                if(!_.has(datasets, datum.tclass, testDataSets)) {
                     datasets[datum.tclass] = [];
+                    testDataSets[] = [];
                 }
                 /*
                 if(!datum.isNumeric()) {
@@ -112,12 +113,8 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 console.log(datasets[datum.tclass]);
                 
             });
-            console.log(datasets[datum.tclass]);
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
        
-                
-                console.log('NEXT');
-                
                 /**********************************************************************/
                 
 
