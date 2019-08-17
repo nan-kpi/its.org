@@ -29,8 +29,13 @@ var YChartView = AbstractPrimaryView.extend({
     
     render: function () {
          var datasets = [];
-
-        _.each(this.model.getCurrentNodes(), function (node, idx) {
+         console.log(this.model.getCurrentNodes());
+/***************************************************
+_.each(list, iteratee, [context]) - Проходит по всему списку элементов, вызывая для каждого из них функцию iteratee,
+которая будет вызвана в контексте context, если он был передан.
+*************************************/
+        
+        _.each(this.model.getCurrentNodes(), function (node, idx) { 
             _.each(node.data, function(datum){
                 if(!_.has(datasets, datum.tclass)) {
                     datasets[datum.tclass] = {
