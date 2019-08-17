@@ -73,7 +73,8 @@ var ZChartView = AbstractPrimaryView.extend({
                 }
             }
         });
-
+        console.log(datasets);
+        
         this.resizeContent();
         myChart.update();
 
