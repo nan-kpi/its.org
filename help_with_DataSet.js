@@ -86,35 +86,35 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 }
                 
                if(datum.tclass == "Task ID") {
-                    testDataSets[datum.tclass].push(datum.getValue()); //Вставити у відповідне місце у масиві
+                    testDataSets[0].push(datum.getValue()); //Вставити у відповідне місце у масиві
                 } else
                 if(datum.tclass == "Task Name") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[1].push(datum.getValue());
                 } else
                 if(datum.tclass == "Resource") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[2].push(datum.getValue());
                 } else
                 if(datum.tclass == "Start Date") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[3].push(datum.getValue());
                 } else
                 if(datum.tclass == "DeadLine") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[4].push(datum.getValue());
                 } else
                 if(datum.tclass == "Duration") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[5].push(datum.getValue());
                 } else
                 if(datum.tclass == "Percent Complete") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[6].push(datum.getValue());
                 } else
                 if(datum.tclass == "Dependencies") {
                     //datasets[datum.tclass].data.push(datum.getValue()); //Вставити у відповідне місце у масиві
-                    testDataSets[datum.tclass].push(datum.getValue());
+                    testDataSets[7].push(datum.getValue());
                 }else {
                     datasets[datum.tclass].data.push(10); //Останній варіант - сповістить про помилку введення
                 }
