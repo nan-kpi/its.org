@@ -46,7 +46,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
 которая будет вызвана в контексте context, если он был передан.
 *************************************/
         
-        _.each(this.model.getCurrentNodes(), function (node, idx) { 
+        _.each(this.model.getCurrentNodes(), function (node) { 
             _.each(node.data, function(datum){
                 if(!_.has(datasets,testDataSets, datum.tclass)) {
                     datasets[datum.tclass] = [];
