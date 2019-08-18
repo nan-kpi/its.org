@@ -45,7 +45,7 @@ var YChartView = AbstractPrimaryView.extend({
 _.each(list, iteratee, [context]) - Проходит по всему списку элементов, вызывая для каждого из них функцию iteratee,
 которая будет вызвана в контексте context, если он был передан.
 *************************************/
-        
+        //_.each(this.model.getCurrentNodes(), function (node, idx)
         _.each(this.model.getCurrentNodes(), function (node) { 
             _.each(node.data, function(datum){
                 if(!_.has(datasets,testDataSets, datum.tclass)) {
@@ -94,6 +94,8 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 else {
                     datasets[datum.tclass].push(10); //Останній варіант - сповістить про помилку введення
                 } 
+                console.log(node]);
+                console.log('NEXT');
                 console.log(testDataSets[_.pluck(node, 'name')]);
             });
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
