@@ -48,8 +48,9 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
         
         _.each(this.model.getCurrentNodes(), function (node, idx) { 
             _.each(node.data, function(datum){
-                if(!_.has(datasets, datum.tclass)) {
+                if(!_.has(datasets,testDataSets, datum.tclass)) {
                     datasets[datum.tclass] = [];
+                    testDataSets[_.pluck(this.model.getCurrentNodes(), 'name')] = [];
                 }
                 /*
                 if(!datum.isNumeric()) {
@@ -60,6 +61,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                              
                if(datum.tclass == "Task ID") {
                    datasets[datum.tclass].push(datum.getValue());
+                   testDataSets[_.pluck(this.model.getCurrentNodes(), 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "Task Name") {
                     datasets[datum.tclass].push(datum.getValue());
@@ -84,7 +86,8 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 }
                 else {
                     datasets[datum.tclass].push(10); //Останній варіант - сповістить про помилку введення
-                }  
+                } 
+                console.log(testDataSets[_.pluck(this.model.getCurrentNodes(), 'name')]);
             });
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
                 
