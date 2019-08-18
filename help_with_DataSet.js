@@ -94,7 +94,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 else {
                     datasets[datum.tclass].push(10); //Останній варіант - сповістить про помилку введення
                 } 
-                console.log(node]);
+                console.log(node);
                 console.log('NEXT');
                 console.log(testDataSets[_.pluck(node, 'name')]);
             });
