@@ -65,24 +65,31 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 } else
                 if(datum.tclass == "Task Name") {
                     datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "Resource") {
-                datasets[datum.tclass].push(datum.getValue());
+                    datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "Start Date") {
                     datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "DeadLine") {
                     datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "Duration") {
                     datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "Percent Complete") {
                     datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 } else
                 if(datum.tclass == "Dependencies") {
                     datasets[datum.tclass].push(datum.getValue());
+                    testDataSets[_.pluck(node, 'name')].push(datum.getValue());
                 }
                 else {
                     datasets[datum.tclass].push(10); //Останній варіант - сповістить про помилку введення
