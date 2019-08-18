@@ -1,5 +1,3 @@
-/* global AbstractPrimaryView, google, _ */
-
 var YChartView = AbstractPrimaryView.extend({
     id: 'linechart2',
 //    tagName: 'canvas', !!!!! це тобі все і ломало. ти давав гугл чарту канвас замість дів-а
@@ -17,7 +15,6 @@ var YChartView = AbstractPrimaryView.extend({
         return overdue;
     },
     
-    
       Transpose: function (arr) {
           return Object.keys(arr[0]).map(function (c) {
             return arr.map(function (r) {
@@ -34,21 +31,16 @@ var YChartView = AbstractPrimaryView.extend({
       return Math.floor(persent/(array.length));
     },
    
-    
-    
     render: function () {
         google.charts.load('current', {'packages': ['gantt']}); //Завантажувати бібліотеку треба тільки раз
         google.charts.setOnLoadCallback(_.bind(function () {
             this.render = function() { //тому коли вона завантажена - замінюємо функцію рендер на нормальну
                 
-                /*********************************************************************/
-
                 var datasets = [];
        var i,j = 0;
          var bigDataSets = [];
          var testDataSets = [];
-        
-         
+                 
 /***************************************************
 _.each(list, iteratee, [context]) - Проходит по всему списку элементов, вызывая для каждого из них функцию iteratee,
 которая будет вызвана в контексте context, если он был передан.
@@ -65,61 +57,34 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                 } else {
                     datasets[datum.tclass].data.push(datum.getValue());
                 }  */
-                
-                
-                //note.set({title: "March 20", content: "In his eyes she eclipses..."});
-                
+                             
                if(datum.tclass == "Task ID") {
                    datasets[datum.tclass].push(datum.getValue());
-                   //datasets[datum.tclass].set({Task_ID: datum.getValue()}); //Вставити у відповідне місце у масиві
-                    //this.testDataSets[0].push(datum.getValue());
-                } 
-                
-                else
+                } else
                 if(datum.tclass == "Task Name") {
                     datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({Task_Name: datum.getValue()}); //Вставити у відповідне місце у масиві
-                    //this.testDataSets[1].push(datum.getValue());
-                }
-                
-                else
+                } else
                 if(datum.tclass == "Resource") {
                 datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({Resource: datum.getValue()}); //Вставити у відповідне місце у масиві
-                   //this.testDataSets[2].push(datum.getValue());
                 } else
                 if(datum.tclass == "Start Date") {
                     datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({Start_Date: datum.getValue()}); //Вставити у відповідне місце у масиві
-                    //this.testDataSets[3].push(datum.getValue());
                 } else
                 if(datum.tclass == "DeadLine") {
                     datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({DeadLine: datum.getValue()}); //Вставити у відповідне місце у масиві
-                   // this.testDataSets[4].push(datum.getValue());
                 } else
                 if(datum.tclass == "Duration") {
                     datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({Duration: datum.getValue()}); //Вставити у відповідне місце у масиві
-                    //this.testDataSets[5].push(datum.getValue());
                 } else
                 if(datum.tclass == "Percent Complete") {
                     datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({Percent_Complete: datum.getValue()}); //Вставити у відповідне місце у масиві
-                    //this.testDataSets[6].push(datum.getValue());
                 } else
                 if(datum.tclass == "Dependencies") {
                     datasets[datum.tclass].push(datum.getValue());
-                    //datasets[datum.tclass].set({Dependencies: datum.getValue()}); //Вставити у відповідне місце у масиві
-                    //this.testDataSets[7].push(datum.getValue());
                 }
-                
-                
                 else {
                     datasets[datum.tclass].push(10); //Останній варіант - сповістить про помилку введення
-                }
-                
-                
+                }  
             });
         }); // - кінець _.each(this.model.getCurrentNodes(), function (node, idx)
                 
@@ -129,7 +94,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
             _.each(node.data, function(datum){
                
                //console.log(this.Transpose(datasets[datum.tclass]));
-
+                console.log(datasets[datum.tclass]);
             });
         });
                 
@@ -180,43 +145,40 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
                myDataSet[0][6] = this.PercentComplete(myDataSet);
              
                 //testDataSets
-               // Data.addRows(myDataSet);
                 Data.addRows(myDataSet);
 
-                   var options = {
-               backgroundColor: {
-                   fill: 'white'
-               },
-               height: 1000,
-               width: 1000,  
-              gantt: {  
-                  arrow: {
-                    spaceAfter: 4, 
-                      length: 5,
-                      angle: 40,
-                      radius: 5,
-                  },
+               var options = {
+                           backgroundColor: {
+                               fill: 'white'
+                           },
+                           height: 1000,
+                           width: 1000,  
+                          gantt: {  
+                              arrow: {
+                                spaceAfter: 4, 
+                                  length: 5,
+                                  angle: 40,
+                                  radius: 5,
+                              },
 
-                  labelMaxWidth: 300,
+                              labelMaxWidth: 300,
 
-                  percentEnabled: true,
+                              percentEnabled: true,
 
-                  trackHeight: 35,
+                              trackHeight: 35,
 
-                  //innerGridHorizLine: null,
+                              //innerGridHorizLine: null,
 
-                  barCornerRadius: 6, //2
-                  barHeight: null,
+                              barCornerRadius: 6, //2
+                              barHeight: null,
 
-                criticalPathEnabled: false,
-                criticalPathStyle: {
-                  stroke: '#e64a19',
-                  strokeWidth: 5
-                }
-
-
-              }
-            };
+                            criticalPathEnabled: false,
+                            criticalPathStyle: {
+                              stroke: '#e64a19',
+                              strokeWidth: 5
+                            }
+                          }
+                        };
 
                 this.chart = new google.visualization.Gantt(this.el);
 
