@@ -74,10 +74,10 @@ this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
                 },
                 layout: {
                     margin: {
-                    right:10
+                    right:0
                     },
             padding: {
-                left: 0,
+                left: 100,
                 right: 0,
                 top: 10,
                 bottom: 0
