@@ -48,7 +48,7 @@ var ZChartView = AbstractPrimaryView.extend({
 this.$el.html('<canvas/>');
 this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
 
-        var myChart = new Chart(this.$el.children('canvas')[0], {
+        var myChart = new Chart(this.el, {
             type: 'radar',
             data: {
                 labels: _.pluck(this.model.getCurrentNodes(), 'name'),
