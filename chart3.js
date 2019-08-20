@@ -59,7 +59,7 @@ var ZChartView = AbstractPrimaryView.extend({
                 responsive: true,
                 maintainAspectRatio: false,
                 legend: {
-                    display: true ,
+                    display: false ,
                     position: 'right',
                     fullWidth: false,
                     fontColor:"blue", 
