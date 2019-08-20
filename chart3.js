@@ -4,6 +4,24 @@ var ZChartView = AbstractPrimaryView.extend({
     id: 'linechart3',
     tagName: 'canvas',
     className: 'viewport linechart',
+        widgetTemplate: 'LineChartViewWidget',
+
+    events: {
+        'click .btn-box-tool': function() {
+             this.$('.left-widget').toggleClass('collapsed-box');
+        },
+            
+        'click input[type=checkbox]': function chart() {
+            this.chart.update();
+            return alert("Done!");
+            
+        }
+    },
+    renderWidgetArguments: function(datasets) {
+        return {that: this, datasets: datasets, headers: _.map(datasets, function(value, key) {
+                return key;
+        })};
+    },
     render: function () {
         var datasets = {};
 
