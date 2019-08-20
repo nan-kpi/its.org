@@ -78,9 +78,9 @@ this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
                     },
             padding: {
                 left: 0,
-                right: 100,
+                right: 250,
                 top: 10,
-                bottom: 60
+                bottom: 100
                 }
                 },
                 scales: {
