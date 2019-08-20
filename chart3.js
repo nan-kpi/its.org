@@ -33,7 +33,7 @@ var ZChartView = AbstractPrimaryView.extend({
                         data: [],
                         borderColor: 'orange', //random
                         borderWidth: 3,
-                        fill: false
+                        fill: true
                     };
                 }
                 
