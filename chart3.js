@@ -104,3 +104,4 @@ var ZChartView = AbstractPrimaryView.extend({
 }); 
 
 $(".linechart").css("overflow","scroll");
+$(".box-title").html("CheckBox");
