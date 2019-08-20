@@ -51,8 +51,8 @@ this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
         var myChart = new Chart(this.el, {
             type: 'radar',
             data: {
-                labels: _.pluck(this.model.getCurrentNodes(), 'name'),
-                datasets: _.toArray(datasets)
+                labels: _.pluck(datasets),
+                datasets: _.toArray(this.model.getCurrentNodes(), 'name')
             },
             options: {
                 responsive: true,
