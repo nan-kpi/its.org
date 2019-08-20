@@ -80,7 +80,7 @@ this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
                 left: 0,
                 right: 100,
                 top: 10,
-                bottom: 10
+                bottom: 60
                 }
                 },
                 scales: {
