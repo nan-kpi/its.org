@@ -44,10 +44,8 @@ var ZChartView = AbstractPrimaryView.extend({
                 }
             });
         });
-            console.log('Simple');
-        console.log(datasets);
-        console.log('HARD');
-            console.log(_.toArray(datasets));
+        this.$el.html('<canvas/>');
+        this.$el.append(this.widgetTemplate(this.renderWidgetArguments(datasets)));
 
         var myChart = new Chart(this.el, {
             type: 'radar',
