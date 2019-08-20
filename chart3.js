@@ -99,9 +99,7 @@ var ZChartView = AbstractPrimaryView.extend({
         myChart.update();
 
         this.hideLoader();
-        function f(x) {
-            return Math.pow(x, 2);
-        }
+        
     }
 }); 
 
