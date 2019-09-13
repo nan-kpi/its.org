@@ -12,8 +12,6 @@ var XChartView = AbstractPrimaryView.extend({
         },
             
         'click input[type=checkbox]': function() {
-            chart.update();
-            alert("Done!");
             //TODO rebuild chart
         }
     },
@@ -97,7 +95,7 @@ var XChartView = AbstractPrimaryView.extend({
 
         this.resizeContent();
         myChart.update();
-        //this.hideLoader();
+        this.hideLoader();
     }
 }); 
 
