@@ -96,9 +96,9 @@ var XChartView = AbstractPrimaryView.extend({
             }
         });
 
-       /* this.resizeContent();
+        this.resizeContent();
         myChart.update();
-        this.hideLoader();*/
+        this.hideLoader();
     }
 }); 
 
