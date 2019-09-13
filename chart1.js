@@ -11,9 +11,9 @@ var XChartView = AbstractPrimaryView.extend({
              this.$('.left-widget').toggleClass('collapsed-box');
         },
             
-        'click input[type=checkbox]': function chart() {
-            this.chart.update();
-            return alert("Done!");
+        'click input[type=checkbox]': function() {
+            chart.update();
+            alert("Done!");
             //TODO rebuild chart
         }
     },
@@ -42,7 +42,6 @@ var XChartView = AbstractPrimaryView.extend({
                 } else {
                     datasets[datum.tclass].data.push(datum.getValue());
                 }
-                 
             });
         });
 
