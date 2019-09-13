@@ -10,7 +10,6 @@ var XChartView = AbstractPrimaryView.extend({
         'click .btn-box-tool': function() {
             this.$('.left-widget').toggleClass('collapsed-box');
         },
-            
         'click input[type=checkbox]': function() {
             //TODO rebuild chart
         }
@@ -98,5 +97,3 @@ var XChartView = AbstractPrimaryView.extend({
         this.hideLoader();
     }
 }); 
-
-$(".box-title").html("CheckBox");
