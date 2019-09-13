@@ -8,7 +8,7 @@ var XChartView = AbstractPrimaryView.extend({
 //    contentTemplate: 'ChartMain',
     events: {
         'click .btn-box-tool': function() {
-             this.$('.left-widget').toggleClass('collapsed-box');
+            this.$('.left-widget').toggleClass('collapsed-box');
         },
             
         'click input[type=checkbox]': function() {
@@ -16,7 +16,7 @@ var XChartView = AbstractPrimaryView.extend({
         }
     },
     renderWidgetArguments: function(datasets) {
-        return {that: this, datasets: datasets, headers: _.map(datasets, function(value, key) {
+        return {lol: '111111', that: this, datasets: datasets, headers: _.map(datasets, function(value, key) {
                 return key;
         })};
     },
@@ -29,7 +29,7 @@ var XChartView = AbstractPrimaryView.extend({
                     datasets[datum.tclass] = {
                         label: datum.tclass,
                         data: [],
-                        borderColor: '#0000FF', //ANY
+                        borderColor: '#000', //ANY
                         borderWidth: 1,
                         fill: false
                     };
@@ -69,7 +69,7 @@ var XChartView = AbstractPrimaryView.extend({
                 title:{
                     display: true,
                     text: 'Биков П.',
-                    fontSize: 35
+                    fontSize: 40
                 },
                 layout: {
                     margin: {
