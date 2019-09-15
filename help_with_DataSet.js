@@ -198,7 +198,7 @@ _.each(list, iteratee, [context]) - Проходит по всему списк�
 
                 this.resizeContent(); //це має бути вкінці рендера
                 
-                this.hideLoader();
+                this.trigger('renderFinished');
             };
             
             this.render();//і запускаємо її на виконання
